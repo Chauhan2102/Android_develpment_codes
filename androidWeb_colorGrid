@@ -1,0 +1,56 @@
+import 'package:flutter/material.dart';
+
+void main(){
+  runApp(mainApp());
+}
+
+class mainApp extends StatelessWidget {
+  const mainApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    const title = "my color grid";
+    return MaterialApp(
+      title: title,
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text ("Color Grid"),
+        ),
+        body: Container(
+          margin: const EdgeInsets.symmetric(vertical: 20.0),
+          height: 200.0,
+          child: ListView(
+          //this where the main thing is happened.
+            scrollDirection: Axis.horizontal,
+            children: <Widget>[
+              Container(
+              width: 160.0,
+              color: Colors.red,
+              ),
+              Container(
+                width: 160.0,
+                color: Colors.blue,
+              ),
+              Container(
+                width: 160.0,
+                color: Colors.purple,
+              ),
+              Container(
+                width: 160.0,
+                color: Colors.orange,
+              ),
+            Container(
+                width: 160.0,
+                color: Colors.white,
+            ),
+              Container(
+                width: 160.0,
+                color: Colors.black,
+              ),
+            ],
+          ),
+          ),
+        ),
+      );
+  }
+}
